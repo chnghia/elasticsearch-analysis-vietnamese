@@ -8,18 +8,38 @@
     <files>
         <file>
             <source>${project.basedir}/src/main/resources/plugin-descriptor.properties</source>
-            <outputDirectory></outputDirectory>
+            <outputDirectory>elasticsearch</outputDirectory>
             <filtered>true</filtered>
         </file>
         <file>
             <source>${project.basedir}/src/main/resources/plugin-security.policy</source>
-            <outputDirectory></outputDirectory>
+            <outputDirectory>elasticsearch</outputDirectory>
+            <filtered>true</filtered>
+        </file>
+        <file>
+            <source>${project.basedir}/lib/nlp-tokenizer-4.1.1.jar</source>
+            <outputDirectory>elasticsearch</outputDirectory>
+            <filtered>true</filtered>
+        </file>
+        <file>
+            <source>${project.basedir}/lib/nlp-fsm-1.0.0.jar</source>
+            <outputDirectory>elasticsearch</outputDirectory>
+            <filtered>true</filtered>
+        </file>
+        <file>
+            <source>${project.basedir}/lib/nlp-sd-2.0.0.jar</source>
+            <outputDirectory>elasticsearch</outputDirectory>
+            <filtered>true</filtered>
+        </file>
+        <file>
+            <source>${project.basedir}/lib/nlp-utils-1.0.0.jar</source>
+            <outputDirectory>elasticsearch</outputDirectory>
             <filtered>true</filtered>
         </file>
     </files>
     <dependencySets>
         <dependencySet>
-            <outputDirectory>/</outputDirectory>
+            <outputDirectory>elasticsearch</outputDirectory>
             <useProjectArtifact>true</useProjectArtifact>
             <useTransitiveFiltering>true</useTransitiveFiltering>
             <excludes>
@@ -27,12 +47,14 @@
             </excludes>
         </dependencySet>
         <dependencySet>
-            <outputDirectory>/</outputDirectory>
+            <outputDirectory>elasticsearch</outputDirectory>
             <useProjectArtifact>true</useProjectArtifact>
             <useTransitiveFiltering>true</useTransitiveFiltering>
             <includes>
-                <include>vn.hus:nlp-tokenizer</include>
-                <include>vn.hus:nlp-sd</include>
+                <include>vn.hus.nlp.fsm:vntokenizer-fsm</include>
+                <include>vn.hus.nlp.utils:vntokenizer-utils</include>
+                <include>vn.hus.nlp.tokenizer:vntokenizer</include>
+                <include>vn.hus.nlp.sd:vntokenizer-sd</include>
                 <include>commons-io:commons-io</include>
             </includes>
         </dependencySet>
