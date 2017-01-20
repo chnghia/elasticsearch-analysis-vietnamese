@@ -16,26 +16,26 @@
             <outputDirectory>elasticsearch</outputDirectory>
             <filtered>true</filtered>
         </file>
-        <file>
+        <!--file>
             <source>${project.basedir}/lib/nlp-tokenizer-4.1.1.jar</source>
             <outputDirectory>elasticsearch</outputDirectory>
             <filtered>true</filtered>
-        </file>
-        <file>
+        </file-->
+        <!--file>
             <source>${project.basedir}/lib/nlp-fsm-1.0.0.jar</source>
             <outputDirectory>elasticsearch</outputDirectory>
             <filtered>true</filtered>
-        </file>
-        <file>
+        </file-->
+        <!--file>
             <source>${project.basedir}/lib/nlp-sd-2.0.0.jar</source>
             <outputDirectory>elasticsearch</outputDirectory>
-            <filtered>true</filtered>
-        </file>
-        <file>
+            <filtered>false</filtered>
+        </file-->
+        <!--file>
             <source>${project.basedir}/lib/nlp-utils-1.0.0.jar</source>
             <outputDirectory>elasticsearch</outputDirectory>
             <filtered>true</filtered>
-        </file>
+        </file-->
     </files>
     <dependencySets>
         <dependencySet>
@@ -51,11 +51,12 @@
             <useProjectArtifact>true</useProjectArtifact>
             <useTransitiveFiltering>true</useTransitiveFiltering>
             <includes>
-                <include>vn.hus.nlp.fsm:vntokenizer-fsm</include>
-                <include>vn.hus.nlp.utils:vntokenizer-utils</include>
                 <include>vn.hus.nlp.tokenizer:vntokenizer</include>
-                <include>vn.hus.nlp.sd:vntokenizer-sd</include>
                 <include>commons-io:commons-io</include>
+                <include>commons-cli:commons-cli</include>
+                <include>org.apache.opennlp:opennlp-tools</include>
+                <include>org.apache.opennlp:opennlp-maxent</include>
+                <include>net.sf.jwordnet:jwnl</include>
             </includes>
         </dependencySet>
     </dependencySets>

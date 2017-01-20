@@ -2,4 +2,6 @@ grant {
   permission java.lang.RuntimePermission "accessDeclaredMembers";
   permission java.lang.RuntimePermission "setFactory";
   permission java.lang.reflect.ReflectPermission "suppressAccessChecks";
+  permission java.io.FilePermission "tokenizer.log", "read,write";
+  permission java.io.FilePermission "tokenizer.log.lck", "read,write";
 };
